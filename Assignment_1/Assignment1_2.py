@@ -12,17 +12,17 @@ Problem statement :
 #-------------------------------------------------------------------------
 def ChkNum(number):
     print("-----------------------------------")
-    print("Input : ",number)
     if number % 2 ==0:
-        print("Output : ",number," : Even Number")
+        print("Output : ",number," is Even Number")
     else:
-        print("Output : ",number," : Odd Number")
+        print("Output : ",number," is Odd Number")
 #-------------------------------------------------------------------------   
 # This function calls ChkNum(num) function with one parameter
 #-------------------------------------------------------------------------
 def main():
-    ChkNum(11)
-    ChkNum(8)
+    print("Enter the number:")
+    num= int(input())
+    ChkNum(num)
 #-------------------------------------------------------------------------
 # Entry point of program
 #-------------------------------------------------------------------------
