@@ -20,7 +20,6 @@ def performOperations(number1,number2):
     print(f"Addition Result: {number1} + {number2} =",result)
     result = Sub(number1,number2)
     print(f"\nSubtraction Result: {number1} - {number2} = ",result)
-    print
     result = Mult(number1,number2)
     print(f"\nMultiplication Result: {number1} * {number2} = ",result)
     if (number2 != 0 ) : 
