@@ -21,15 +21,6 @@ def ChkPrime(number):
          if (number % num == 0) :
                 return False
     return True  
-#-------------------------------------------------------------------------------------
-# This Function finds the maximum number from the list
-#-------------------------------------------------------------------------------------
-def findMaximumElement(numberList):
-    max = 0
-    for num in numberList:
-         if num > max :
-             max = num
-    return max         
 #------------------------------------------------------------------------------------------
 # This function accepts the numbers from the user and applies 
 # filter(),Map() and reduce() functionality
