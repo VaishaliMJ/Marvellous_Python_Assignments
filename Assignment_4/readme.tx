@@ -1,0 +1,16 @@
+This folder contains all files related to Assignment 4
+MarvellousFunctions.py is the module file which conatins all the common functions of Assignment 4
+Following files uses inbuilt filter(),map() and reduce() functions
+    Assignment4_3.py
+    Assignment4_4.py
+    Assignment4_5.py 
+
+Following files uses custom filter(),map() and reduce() functions
+    Assignment4_3_1.py
+    Assignment4_4_1.py
+    Assignment4_5_1.py 
+
+
+
+
+
