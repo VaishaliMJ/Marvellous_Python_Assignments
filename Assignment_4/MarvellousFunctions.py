@@ -3,7 +3,7 @@
                     (Student name - Vaishali Jorwekar)
                      Python by Marvellous Infosystems
 -------------------------------------------------------------------------------------------
-This file is module and contains function ChkPrime(number)
+This file is a module and contains common Functions
 -----------------------------------------------------------------------------------------"""
 #-------------------------------------------------------------------------------------------
 # This Function accepts the number to be added in the list
