@@ -252,7 +252,7 @@ def main():
         #Init Script  
         initScript()
     except Exception as errObj:
-        print("\Exception in main():",errObj)      
+        print("\nException in main():",errObj)      
 #---------------------------------------------------------------------------------------------------------
 # Entry point of prog
 #---------------------------------------------------------------------------------------------------------
