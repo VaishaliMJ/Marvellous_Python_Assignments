@@ -33,7 +33,7 @@ def main():
             time.sleep(1)
         print("End of Automation script......")
     except Exception as errObj:
-        print("\Exception in main():",errObj)      
+        print("\nException in main():",errObj)      
 
 #---------------------------------------------------------------------------------------------------------
 # Entry point of prog

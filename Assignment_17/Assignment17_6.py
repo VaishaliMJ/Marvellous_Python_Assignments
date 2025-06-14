@@ -51,7 +51,7 @@ def main():
             schedule.run_pending()
             time.sleep(1)
     except Exception as errObj:
-        print("\Exception in main():",errObj)  
+        print("\nException in main():",errObj)  
 #---------------------------------------------------------------------------------------------------------
 # Entry point of prog
 #---------------------------------------------------------------------------------------------------------
