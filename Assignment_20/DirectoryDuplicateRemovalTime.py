@@ -166,9 +166,9 @@ def createLogFile(progName,directoryName):
 #------------------------------------------------------------------------------
 def main():
     try:
-      ScriptEndTime=time.time()
+      ScriptStartTime=time.time()
       #Initialise script
-      initScript(ScriptEndTime)
+      initScript(ScriptStartTime)
     except Exception as Err:
       print(f"Exception occured in main().:",Err)  
 #------------------------------ENTRY POINT OF PROGRAM-------------------------------------------
