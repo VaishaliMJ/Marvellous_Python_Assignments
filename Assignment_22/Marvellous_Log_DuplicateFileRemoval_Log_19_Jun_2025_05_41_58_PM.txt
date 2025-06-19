@@ -1,0 +1,50 @@
+
+--------------------------------------------------------------------------------
+		This is log file of 'DuplicateFileRemoval.py' script
+		Script to delete duplicate files in Directory
+		Input Directory:'/Users/vaishali/Desktop/TestDuplicates'
+--------------------------------------------------------------------------------
+		Date File Created :19-Jun-2025
+		Time File Created :05:41:58 PM
+--------------------------------------------------------------------------------
+
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/17 copy.txt', '/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy.txt
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/TestFile copy 3.py', '/Users/vaishali/Desktop/TestDuplicates/TestFile copy 4.py']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/TestFile copy 3.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/TestFile copy 4.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/TestFile copy 4.py
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/8.py', '/Users/vaishali/Desktop/TestDuplicates/8 copy.py']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy.py
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/Test.doc', '/Users/vaishali/Desktop/TestDuplicates/Test copy 3.doc', '/Users/vaishali/Desktop/TestDuplicates/Test copy 2.doc', '/Users/vaishali/Desktop/TestDuplicates/Test copy 4.doc', '/Users/vaishali/Desktop/TestDuplicates/Test copy.doc']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 3.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 3.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 2.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 2.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 4.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy 4.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test copy.doc
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/Test2 copy.doc', '/Users/vaishali/Desktop/TestDuplicates/Test2 copy 4.doc', '/Users/vaishali/Desktop/TestDuplicates/Test2 copy 2.doc', '/Users/vaishali/Desktop/TestDuplicates/Test2 copy 3.doc']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 4.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 4.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 2.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 2.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 3.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/Test2 copy 3.doc
+--------------------------------------------------------------------------------
+Total deleted duplicate files :10
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Total scanned files :16
+--------------------------------------------------------------------------------
