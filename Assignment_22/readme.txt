@@ -10,3 +10,7 @@
                Total number of duplicate files found 
 
 DuplicateFileRemoval.py "folderPath" "scedularDuration_in mins" "receiverEmailId"
+
+
+Update .env file before running the program
+It contains information related to email,server,login and password
