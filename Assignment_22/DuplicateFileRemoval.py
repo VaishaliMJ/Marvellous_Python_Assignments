@@ -104,7 +104,7 @@ def sendEmail(outputFileName,scannedFile,duplicateDeleted,ScriptStartTime):
         # message to be sent
         subject = "Process log file created..."
 
-        body = "Hi,\nAttached currently running process log.\n" \
+        body = "Hi,\nDeleted duplicate files log.\n" \
                  f"Execution start time : {ScriptStartTime}\n" \
                  f"Total number of files scanned:{scannedFile}\n" \
                  f"Total number of Duplicate files found:{duplicateDeleted}"
@@ -253,7 +253,7 @@ def createLogFolderAndFile(progName,directoryName):
 #------------------------------------------------------------------------------
 def main():
     try:
-        ScriptStartTime=Module.formatTime()
+        ScriptStartTime=Module.getCurrFormattedTime()
         print(ScriptStartTime)
     # loading variables from .env file
         load_dotenv()  

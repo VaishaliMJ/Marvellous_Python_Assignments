@@ -3,7 +3,7 @@
                     (Student name - Vaishali Jorwekar)
                      Python by Marvellous Infosystems
 ---------------------------------------------------------------------------------------------------------
-Problem statement :This file coniatins all common functions used in Assignment 20
+Problem statement :This file coniatins all common functions used in Assignment 22
 ---------------------------------------------------------------------------------------------------------"""
 import os,sys,datetime
 #-------------------------------------------------------------------------------
