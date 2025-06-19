@@ -1,0 +1,70 @@
+
+--------------------------------------------------------------------------------
+		This is log file of 'DuplicateFileRemoval.py' script
+		Script to delete duplicate files in Directory
+		Input Directory:'/Users/vaishali/Desktop/TestDuplicates'
+--------------------------------------------------------------------------------
+		Date File Created :19-Jun-2025
+		Time File Created :05:16:41 PM
+--------------------------------------------------------------------------------
+
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/4.doc', '/Users/vaishali/Desktop/TestDuplicates/4 copy 3.doc', '/Users/vaishali/Desktop/TestDuplicates/4 copy 2.doc', '/Users/vaishali/Desktop/TestDuplicates/4 copy 4.doc', '/Users/vaishali/Desktop/TestDuplicates/4 copy.doc']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/4.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 3.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 3.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 2.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 2.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 4.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy 4.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/4 copy.doc
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/17 copy.txt', '/Users/vaishali/Desktop/TestDuplicates/17.txt', '/Users/vaishali/Desktop/TestDuplicates/17 copy 3.txt', '/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt', '/Users/vaishali/Desktop/TestDuplicates/17 copy 4.txt']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy.txt
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17.txt
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/17.txt
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 3.txt
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 3.txt
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 2.txt
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 4.txt
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/17 copy 4.txt
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/7.doc', '/Users/vaishali/Desktop/TestDuplicates/7 copy.doc', '/Users/vaishali/Desktop/TestDuplicates/7 copy 4.doc', '/Users/vaishali/Desktop/TestDuplicates/7 copy 2.doc', '/Users/vaishali/Desktop/TestDuplicates/7 copy 3.doc']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/7.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 4.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 4.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 2.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 2.doc
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 3.doc
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/7 copy 3.doc
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/8.py', '/Users/vaishali/Desktop/TestDuplicates/8 copy 4.py', '/Users/vaishali/Desktop/TestDuplicates/8 copy.py', '/Users/vaishali/Desktop/TestDuplicates/8 copy 3.py', '/Users/vaishali/Desktop/TestDuplicates/8 copy 2.py']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 4.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 4.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 3.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 3.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 2.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/8 copy 2.py
+--------------------------------------------------------------------------------
+Duplicates Files:['/Users/vaishali/Desktop/TestDuplicates/14 copy.py', '/Users/vaishali/Desktop/TestDuplicates/14.py', '/Users/vaishali/Desktop/TestDuplicates/14 copy 3.py', '/Users/vaishali/Desktop/TestDuplicates/14 copy 2.py', '/Users/vaishali/Desktop/TestDuplicates/14 copy 4.py']
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/14.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/14.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 3.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 3.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 2.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 2.py
+		File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 4.py
+		Deleted File Name:	/Users/vaishali/Desktop/TestDuplicates/14 copy 4.py
+--------------------------------------------------------------------------------
+Total deleted duplicate files :20
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Total scanned files :26
+--------------------------------------------------------------------------------
