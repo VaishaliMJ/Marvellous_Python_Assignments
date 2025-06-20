@@ -37,8 +37,10 @@ def initScript():
                 print("FolderName accepted from command line,which contains output log file")
             elif((sys.argv[1]=="--u") or (sys.argv[1]=="--U")):
                 print("Use the given script as ")  
-                print("ScriptName.py  processName")  
+                print("ScriptName.py  folderName")  
                 print("\nRefer argv[1]/ProcInfoLog.txt for output or error messages...")
+            else:
+                Module.invalidArgsMsg()    
         elif(len(sys.argv)==3):
                   #Creates log file for script
                   logFileName=createLogFile(sys.argv[0])
@@ -137,11 +139,11 @@ def createLogFile(progName):
             logFileObj.write(Border+"\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-             print(f"Exception occured in createLogFile().:",Err)  
+             print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName           
 #------------------------------------------------------------------------------
 #Main method,Initialise script and load env variables

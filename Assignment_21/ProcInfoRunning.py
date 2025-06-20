@@ -62,7 +62,7 @@ def displayCurrentProcesses(processName,logFileName):
     except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
         pass    
     except Exception as Err:
-        logFileObj.write(f"Exception occured displayCurrentProcesses().:",Err)  
+        logFileObj.write(f"Exception occured displayCurrentProcesses().:{Err}")  
     finally:
          logFileObj.close()    
 #-------------------------------------------------------------------------------
@@ -87,11 +87,11 @@ def createLogFile(progName):
             logFileObj.write(Border+"\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-             print(f"Exception occured in createLogFile().:",Err)  
+             print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName           
 
 def main():
