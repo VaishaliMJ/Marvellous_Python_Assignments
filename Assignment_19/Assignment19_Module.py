@@ -89,7 +89,7 @@ def checkIfFileExists(FileName,logFileObj):
         currentWorkingDirectory=os.getcwd()
         #Find the file path
         fileExists= os.path.exists(FileName)
-        print(fileExists)
+        #print(fileExists)
     except Exception as exeObj:
        logFileObj.write(f"\nException in method checkFileIfFileExists():{exeObj}")   
     return fileExists
