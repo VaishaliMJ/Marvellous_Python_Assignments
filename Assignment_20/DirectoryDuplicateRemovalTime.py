@@ -19,7 +19,7 @@ Border="-"*80
 def initScript(ScriptStartTime):
     try:
         #print(Border)
-        print("-----Find Duplicate files and remove from the directory,caculates execution time --------")
+        print("-----Find Duplicate files and remove from the directory,calculates execution time --------")
         #print(Border)    #Logic
         #Less number of args
         if(len(sys.argv)==1):
@@ -53,20 +53,20 @@ def findAndRemoveDuplicateFiles(directoryName,logFileName,ScriptStartTime):
             #Validate directory name
             directoryName=Module.validateDirectory(directoryName,logFileObj)
             #Directory travesal and duplicate logic
-            directoryTravesalAndDeleteDuplicates(directoryName,logFileObj)
+            directoryTraversalAndDeleteDuplicates(directoryName,logFileObj)
             ScriptEndTime=time.time()
             logFileObj.write(f"\n\nTotal Execution time is :{ScriptEndTime-ScriptStartTime}")
             logFileObj.close()
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in searchDirectory().:",Err)
+            logFileObj.write(f"Exception occured in findAndRemoveDuplicateFiles().:{Err}")
 #-------------------------------------------------------------------------------
 # Retrieving all files and Duplicate logic using check sum
 #-------------------------------------------------------------------------------
-def directoryTravesalAndDeleteDuplicates(directoryName,logFileObj):
+def directoryTraversalAndDeleteDuplicates(directoryName,logFileObj):
       try:  
             fileCount=0
             for folderName, SubFolderNames, fileNames in os.walk(directoryName):
@@ -82,11 +82,11 @@ def directoryTravesalAndDeleteDuplicates(directoryName,logFileObj):
             findAndRemoveDuplicates(DuplicateDict,logFileObj)                  
                         
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in retrieveExtParticularFiles().:",Err)            
+            logFileObj.write(f"Exception occured in directoryTravesalAndDeleteDuplicates():{Err}")            
 #------------------------------------------------------------------------------
 # Find the name of the duplicate files and delete them
 #------------------------------------------------------------------------------
@@ -110,7 +110,7 @@ def findAndRemoveDuplicates(DuplicateFileDict,logFileObj):
       logFileObj.write("\n"+Border)
 
     except Exception as err:
-         logFileObj.write("Error in method:findDuplicates()",err)      
+         logFileObj.write(f"Error in method:findAndRemoveDuplicates():{err}")      
 #-------------------------------------------------------------------------------
 # This function calculates the checksum of the file
 #-------------------------------------------------------------------------------
@@ -128,7 +128,7 @@ def findCheckSum(filePath,logFileObj):
                   buffer=fObj.read(BlockSize) 
             fObj.close()   
      except Exception as errObj:
-      logFileObj.write("Error while calculating checksum Method findCheckSum()",errObj)
+      logFileObj.write(f"Error while calculating checksum Method findCheckSum():{errObj}")
      return hobj.hexdigest()
 #-------------------------------------------------------------------------------
 # This function return the name of the log file for directory search
@@ -155,11 +155,11 @@ def createLogFile(progName,directoryName):
             logFileObj.write(Border+"\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-             print(f"Exception occured in createLogFile().:",Err)  
+             print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName           
 #-------------------------------------------------------------------------------
 # This function main function initialises script

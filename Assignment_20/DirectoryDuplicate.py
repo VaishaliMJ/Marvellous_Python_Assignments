@@ -54,11 +54,11 @@ def findDuplicateFiles(directoryName,logFileName):
             directoryTravesalAndFindDuplicates(directoryName,logFileObj)
             logFileObj.close()
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in searchDirectory().:",Err)
+            logFileObj.write(f"Exception occured in searchDirectory().:{Err}")
 #-------------------------------------------------------------------------------
 # Retrieving all files and Duplicate logic using check sum
 #-------------------------------------------------------------------------------
@@ -78,11 +78,11 @@ def directoryTravesalAndFindDuplicates(directoryName,logFileObj):
             findDuplicates(DuplicateDict,logFileObj)                  
                         
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in retrieveExtParticularFiles().:",Err)            
+            logFileObj.write(f"Exception occured in retrieveExtParticularFiles().:{Err}")            
 #------------------------------------------------------------------------------
 # Find the name of the duplicate files
 #------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ def findDuplicates(DuplicateFileDict,logFileObj):
                   logFileObj.write(f"\n\t\tFile Name:\t{fileName}") 
             logFileObj.write("\n"+Border)
     except Exception as err:
-         logFileObj.write("Error in method:findDuplicates()",err)      
+         logFileObj.write(f"Error in method:findDuplicates():{err}")      
 #-------------------------------------------------------------------------------
 # This function calculates the checksum of the file
 #-------------------------------------------------------------------------------
@@ -116,7 +116,7 @@ def findCheckSum(filePath,logFileObj):
                   buffer=fObj.read(BlockSize) 
             fObj.close()   
      except Exception as errObj:
-      logFileObj.write("Error while calculating checksum Method findCheckSum()",errObj)
+      logFileObj.write(f"Error while calculating checksum Method findCheckSum():{errObj}")
      return hobj.hexdigest()
 #-------------------------------------------------------------------------------
 # This function return the name of the log file for directory search
@@ -143,11 +143,11 @@ def createLogFile(progName,directoryName):
             logFileObj.write(Border+"\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-             print(f"Exception occured in createLogFile().:",Err)  
+             print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName           
 #-------------------------------------------------------------------------------
 # This function main function initialises script
