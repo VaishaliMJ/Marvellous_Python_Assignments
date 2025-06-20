@@ -50,7 +50,7 @@ def generateLogFileName(progFileName):
             fileName=progFileName.split(".")
             logFileName=f"{fileName[0]}_Log_{currTime}.txt"
       except Exception as Err:
-            print(f"Exception occured in generateLogFileName().:",Err) 
+            print(f"Exception occured in generateLogFileName().:{Err}") 
       return logFileName         
 #-------------------------------------------------------------------------------
 # This function validates the directory
@@ -89,9 +89,10 @@ def checkIfFileExists(FileName,logFileObj):
         currentWorkingDirectory=os.getcwd()
         #Find the file path
         fileExists= os.path.exists(FileName)
+        print(fileExists)
     except Exception as exeObj:
-       logFileObj.write("\nException in method checkFileIfFileExists()",exeObj)   
-    return fileExists,currentWorkingDirectory
+       logFileObj.write(f"\nException in method checkFileIfFileExists():{exeObj}")   
+    return fileExists
 
 #-------------------------------------------------------------------
 # This function opens the given file and reads its contents
@@ -110,7 +111,7 @@ def checkIfFileNotEmpty(fileName,logFileObj):
             logFileObj.write(f"File Name :'{fileName}'\nFile size is :{fileSize} bytes.")
             return False
     except Exception as exeObj:
-        logFileObj.write("\nExecption in checkIfFileNotEmpty() method.",exeObj)
+        logFileObj.write(f"\nExecption in checkIfFileNotEmpty() method.:{exeObj}")
     
 #-------------------------------------------------------------------
 
