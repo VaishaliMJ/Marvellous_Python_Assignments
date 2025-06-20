@@ -58,11 +58,11 @@ def searchDirectory(directoryName,extFile,logFileName):
             retrieveExtParticularFiles(directoryName,extFile,logFileObj)
             logFileObj.close()
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in searchDirectory().:",Err)
+            logFileObj.write(f"Exception occured in searchDirectory().:{Err}")
 #-------------------------------------------------------------------------------
 # Retrieving particular extension files only
 #-------------------------------------------------------------------------------
@@ -80,11 +80,11 @@ def retrieveExtParticularFiles(directoryName,extFile,logFileObj):
             logFileObj.write(f"\nTotal file count with '{extFile}' : {fileCount}")
             logFileObj.write("\n"+Border)            
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in retrieveExtParticularFiles().:",Err)            
+            logFileObj.write(f"Exception occured in retrieveExtParticularFiles().:{Err}")            
 #-------------------------------------------------------------------------------
 # This function return the name of the log file for directory search
 #-------------------------------------------------------------------------------        
@@ -111,11 +111,11 @@ def createLogFile(progName,directoryName,extFile):
             logFileObj.write(Border+"\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-             print(f"Exception occured in createLogFile().:",Err)  
+             print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName           
 #-------------------------------------------------------------------------------
 # This function main function initialises script

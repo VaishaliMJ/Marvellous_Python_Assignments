@@ -37,6 +37,8 @@ def initScript():
                 print("ScriptName.py  directoryName extFile")  
                 print("Please provide valid absolute path....")
                 print("\nRefer DirectoryCopyExt_log_{timestamp}.txt for output or error messages...")
+            else:
+                  Module.invalidArgsMsg()    
         elif(len(sys.argv)==3):
                  #Creates log file for script #prog name and directory name
                   logFileName,copyDirectoryName=createLogFile(sys.argv[0],sys.argv[1])
@@ -60,11 +62,11 @@ def copyDirectoryExtFiles(directoryName,extFile,logFileName,copyDirectoryName):
             #Close file object
             logFileObj.close()
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in renameDirectoryFiles().:",Err)
+            logFileObj.write(f"Exception occured in renameDirectoryFiles().:{Err}")
 #-------------------------------------------------------------------------------
 # Copying files from source folder to destination folder
 #-------------------------------------------------------------------------------
@@ -104,11 +106,11 @@ def copyFilesAndFolders(directoryName,logFileObj,copyDirectoryName,extFile):
       except OSError as error:
              logFileObj.write(f"\nDirectory '{copyDirectoryName}' can not be created")                 
       except FileExistsError as fileErr:
-            logFileObj.write(f"\n{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"\n{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"\n{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"\n{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"\nException occured in retrieveExtParticularFiles().:",Err)            
+            logFileObj.write(f"\nException occured in retrieveExtParticularFiles().:{Err}")            
 #-------------------------------------------------------------------------------
 # This function return the name of the log file for directory search
 #-------------------------------------------------------------------------------        
@@ -137,11 +139,11 @@ def createLogFile(progName,directoryName):
             logFileObj.write("\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-            print(f"Exception occured in createLogFile().:",Err)  
+            print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName,copyDirectoryName                                      
 #-------------------------------------------------------------------------------
 # This function main function initialises script

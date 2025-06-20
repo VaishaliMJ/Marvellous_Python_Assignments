@@ -45,7 +45,7 @@ def initScript():
             Module.invalidArgsMsg()
        #print(Border)
     except Exception as excObj:
-        print("\nError while accepting the command line arguments...",excObj)  
+        print(f"\nError while accepting the command line arguments...{excObj}")  
 #-------------------------------------------------------------------------------
 # Copy directory logic
 #-------------------------------------------------------------------------------         
@@ -59,11 +59,11 @@ def copyDirectoryFiles(directoryName,logFileName,copyDirectoryName):
             #Close file object
             logFileObj.close()
       except FileExistsError as fileErr:
-            logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"Exception occured in copyDirectoryFiles().:",Err)
+            logFileObj.write(f"Exception occured in copyDirectoryFiles().:{Err}")
 #-------------------------------------------------------------------------------
 # Copying files from source folder to destination folder
 #-------------------------------------------------------------------------------
@@ -107,13 +107,13 @@ def copyFilesAndFolders(directoryName,logFileObj,copyDirectoryName):
             logFileObj.write("\n"+Border)
                 
       except OSError as osObj:
-             logFileObj.write(f"\nDirectory '{copyDirectoryName}' can not be created",osObj)                 
+             logFileObj.write(f"\nDirectory '{copyDirectoryName}' can not be created:{osObj}")                 
       except FileExistsError as fileErr:
-            logFileObj.write(f"\n{directoryName} does not exists..:",fileErr)    
+            logFileObj.write(f"\n{directoryName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            logFileObj.write(f"\n{directoryName} not found..:",fileErr)    
+            logFileObj.write(f"\n{directoryName} not found..:{fileErr}")    
       except Exception as Err:
-            logFileObj.write(f"\nException occured in copyFilesAndFolders().:",Err) 
+            logFileObj.write(f"\nException occured in copyFilesAndFolders().:{Err}") 
 #------------------------------------------------------------------
 # This function makes log entry of folders
 #------------------------------------------------------------------
@@ -157,11 +157,11 @@ def createLogFile(progName,directoryName):
             logFileObj.write("\n")
             logFileObj.close()
       except FileExistsError as fileErr:
-            print(f"{logFileName} does not exists..:",fileErr)    
+            print(f"{logFileName} does not exists..:{fileErr}")    
       except FileNotFoundError as fileErr:
-            print(f"{logFileName} not found..:",fileErr)    
+            print(f"{logFileName} not found..:{fileErr}")    
       except Exception as Err:
-            print(f"Exception occured in createLogFile().:",Err)  
+            print(f"Exception occured in createLogFile().:{Err}")  
       return logFileName,copyDirectoryName                                      
 #-------------------------------------------------------------------------------
 # This function main function initialises script
