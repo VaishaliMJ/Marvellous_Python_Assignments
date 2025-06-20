@@ -90,11 +90,11 @@ def findAndDeleteDuplicateFiles(ScriptStartTime):
         sendEmail(logFileName,scannedFile,duplicateDeleted,ScriptStartTime)
         
     except FileExistsError as fileErr:
-        logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+        logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
     except FileNotFoundError as fileErr:
-        logFileObj.write(f"{directoryName} not found..:",fileErr)    
+        logFileObj.write(f"{directoryName} not found..:{fileErr}")    
     except Exception as Err:
-        logFileObj.write(f"Exception occured in findAndRemoveDuplicateFiles().:",Err)
+        logFileObj.write(f"Exception occured in findAndRemoveDuplicateFiles().:{Err}")
 #-------------------------------------------------------------------------------
 # This method sends an email after creation of log file
 #-------------------------------------------------------------------------------
@@ -165,11 +165,11 @@ def directoryTravesalAndDeleteDuplicates(directoryName,logFileObj):
         logFileObj.write("\n"+Border)
                 
     except FileExistsError as fileErr:
-        logFileObj.write(f"{directoryName} does not exists..:",fileErr)    
+        logFileObj.write(f"{directoryName} does not exists..:{fileErr}")    
     except FileNotFoundError as fileErr:
-        logFileObj.write(f"{directoryName} not found..:",fileErr)    
+        logFileObj.write(f"{directoryName} not found..:{fileErr}")    
     except Exception as Err:
-        logFileObj.write(f"Exception occured in directoryTravesalAndDeleteDuplicates().:",Err)            
+        logFileObj.write(f"Exception occured in directoryTravesalAndDeleteDuplicates().:{Err}")            
     return totalfileCount,totalDuplicateDeleted
 #------------------------------------------------------------------------------
 # Find the name of the duplicate files and delete them
@@ -194,7 +194,7 @@ def findAndRemoveDuplicates(DuplicateFileDict,logFileObj):
       logFileObj.write("\n"+Border)
 
     except Exception as err:
-         logFileObj.write("Error in method:findAndRemoveDuplicates()",err)  
+         logFileObj.write(f"\nError in method:findAndRemoveDuplicates():{err}")  
     return totalDuplicateDeleted       
 #-------------------------------------------------------------------------------
 # This function calculates the checksum of the file
@@ -213,7 +213,7 @@ def findCheckSum(filePath,logFileObj):
                   buffer=fObj.read(BlockSize) 
             fObj.close()   
      except Exception as errObj:
-      logFileObj.write("Error while calculating checksum Method findCheckSum()",errObj)
+      logFileObj.write(f"\nError while calculating checksum Method findCheckSum():{errObj}")
      return hobj.hexdigest()
 
 #-------------------------------------------------------------------------------    
@@ -240,11 +240,11 @@ def createLogFolderAndFile(progName,directoryName):
         logFileObj.write(Border+"\n")
         logFileObj.close()
     except FileExistsError as fileErr:
-        print(f"{logFileName} does not exists..:",fileErr)    
+        print(f"{logFileName} does not exists..:{fileErr}")    
     except FileNotFoundError as fileErr:
-        print(f"{logFileName} not found..:",fileErr)    
+        print(f"{logFileName} not found..:{fileErr}")    
     except Exception as Err:
-        print(f"Exception occured in createLogFile().:",Err)  
+        print(f"Exception occured in createLogFile().:{Err}")  
     return logFileName           
 
 #------------------------------------------------------------------------------
