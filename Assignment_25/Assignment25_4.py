@@ -30,14 +30,7 @@ def oneHotEncoding():
 
     print(encodedDF)
     print(BORDER)
-""" Sample output
-        Department_Finance  Department_HR  Department_IT
-0                   0              1              0
-1                   0              0              1
-2                   1              0              0
-3                   0              1              0
-4                   0              0              1
-"""    
+
 #---------------------------------------------------------------------------------
 #  Main function calls oneHotEncoding() 
 #---------------------------------------------------------------------------------------------------------
