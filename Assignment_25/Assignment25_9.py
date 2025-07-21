@@ -10,9 +10,9 @@ import pandas as pd
 
 BORDER="-"*50
 #---------------------------------------------------------------------------------
-# Create salary Data
+# Create Marks data and replace using where() method
 #---------------------------------------------------------------------------------
-def fillMissingValues():
+def replaceLessThan50Marks():
     data={'Marks':[45,67,88,32,76]}
 
     marksDF=pd.DataFrame(data)
@@ -29,11 +29,11 @@ def fillMissingValues():
     print(BORDER)
 
 #---------------------------------------------------------------------------------
-#  Main function calls fillMissingValues() 
+#  Main function calls replaceLessThan50Marks() 
 #---------------------------------------------------------------------------------------------------------
 def main():
-    #Detect fill Missing Values in data
-    fillMissingValues()
+    #Replace "Marks' Column values using where clause
+    replaceLessThan50Marks()
     
 #---------------------------------------------------------------------------------------------------------
 #Main entry point of the program

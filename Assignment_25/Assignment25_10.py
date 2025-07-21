@@ -10,9 +10,9 @@ import pandas as pd
 
 BORDER="-"*50
 #---------------------------------------------------------------------------------
-# Create salary Data
+# split Data Set
 #---------------------------------------------------------------------------------
-def fillMissingValues():
+def splitDataSet():
     data={'Age':[25,20,45,35,22],'Salary':[50000,60000,80000,65000,45000],'Purchased':[1,0,1,0,1]}
 
     df=pd.DataFrame(data)
@@ -46,11 +46,11 @@ def fillMissingValues():
     print(BORDER)
 
 #---------------------------------------------------------------------------------
-#  Main function calls fillMissingValues() 
+#  Main function calls splitDataSet() 
 #---------------------------------------------------------------------------------------------------------
 def main():
-    #Detect fill Missing Values in data
-    fillMissingValues()
+    #split data set 
+    splitDataSet()
     
 #---------------------------------------------------------------------------------------------------------
 #Main entry point of the program

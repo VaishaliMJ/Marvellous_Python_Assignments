@@ -20,7 +20,7 @@ def normaliseAgeColumn():
     print(ageDF)
     print(BORDER)
 #---------------------------------------------------------------------------------------------------------
-#  Main function calls normaliseColumn() 
+#  Main function calls normaliseAgeColumn() 
 #---------------------------------------------------------------------------------------------------------
 def main():
     

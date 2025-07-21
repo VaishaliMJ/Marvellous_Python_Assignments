@@ -9,7 +9,7 @@ from sklearn import preprocessing
 import pandas as pd
 BORDER="-"*60
 #---------------------------------------------------------------------------------
-
+#  Label Encoding using dictionary
 #---------------------------------------------------------------------------------
 
 def labelEncoding():
