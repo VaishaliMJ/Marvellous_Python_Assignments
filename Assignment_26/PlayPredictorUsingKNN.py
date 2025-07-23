@@ -137,19 +137,17 @@ def checkAccuracy(dFPlay):
     print("Checking model accuracy......")
     print("Dividing Data set int 50% Train And 50% Test data set")
     print(BORDER)
+    """Extracting featues and labels"""
+    xIndependent,yDependent=getIndepedentAndDependentCol(dFPlay)
+    """Splitting the data set in Training : 50% Test : 50%"""
+    x_train,x_test,y_train,y_test=train_test_split(xIndependent,yDependent,test_size=0.5,random_state=42)
+        
     """Creating dictionary for {k,Accuracy} values"""
     accuracyScoreDict={'k':[],'accuracy':[]}
     """Selcting range values for 'k'"""
     k_range=range(1,16)
     for k in k_range:
-        """Extracting featues and labels"""
-        xIndependent,yDependent=getIndepedentAndDependentCol(dFPlay)
-        """Splitting the data set in Training : 50% Test : 50%"""
-        x_train,x_test,y_train,y_test=train_test_split(xIndependent,yDependent,test_size=0.5,random_state=42)
-        #print("x_train shape:",x_train.shape)
-        #print("x_test shape:",x_test.shape)
-        #print("y_train shape:",y_train.shape)
-        #print("y_test shape:",y_test.shape)
+        
         """Build model for various values of K"""
         model=trainDataSet(x_train,y_train,k)
         """Predicting test data values"""
@@ -205,7 +203,7 @@ def main():
     #Prepare Data using label encoding
     prepareDataset(dFPlay)
 
-    """Step-3 : Train data
+    """Step-3 : Train and test data
     #-----------------------
     #Train data set 
     #Extracting Independent and dependent variables"""
