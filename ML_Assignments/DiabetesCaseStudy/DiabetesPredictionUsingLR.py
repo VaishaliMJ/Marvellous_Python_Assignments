@@ -369,14 +369,14 @@ def plotFeatureImportance(model,feature_names):
     importances=[]
     if hasattr(model,"named_steps") and "clf" in model.named_steps:
         clf=model.named_steps['clf']
-        if hasattr(clf,"feature.importances_"):
+        if hasattr(clf,"feature_importances_"):
             importances=(clf.feature_importances_)
         elif hasattr(clf,"coef_"):
              importances=clf.coef_[0] 
              importances=np.abs((importances))
 
-    elif(hasattr(model,"feature.importances_")):
-        importances=model.feature.importances_
+    elif(hasattr(model,"feature_importances_")):
+        importances=model.feature_importances_
     elif(hasattr(model,"coef_")):
          importances=model.coef_[0] 
          importances=np.abs((importances))
