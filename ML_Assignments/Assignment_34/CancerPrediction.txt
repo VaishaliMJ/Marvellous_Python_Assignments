@@ -1,0 +1,188 @@
+Priblem Statement:
+Problem statement: Based on given information find whether given tumor is malignant(Cancerous) or benign(Non-Cancerous)
+
+Data File :	load_breast_cancer(scikit-learn datasets)
+interaction details.It Follows  industrial best practices  by
+	•	Automating preprocessing with Pipeline
+	•	Scaling the dataset values using StandardScalar
+	•	Used Random Forest,Decision Tree,Random Forest,KNN and Logistic Regression as classification algorithms
+	•	Saving and loading trained model using job lib
+	•	Provided data visualiztion 
+
+Dependencies:
+Install the required Python packages before running the project
+	pip install pandas numpy matplotlib scikit-learn joblib
+
+DataSet information:
+Features:
+	1.	mean radius 
+	2.	mean texture 
+	3.	mean perimeter 
+	4.	mean area
+    5.  mean smoothness 
+	6.	mean compactness 
+	7.	mean concavity
+    8.  mean concave points 
+	9.	mean symmetry 
+	10.	mean fractal dimension
+    11. radius error
+	12.	texture error
+	13.	perimeter error 
+	14.	area error
+    15.	smoothness error
+	16.	compactness error 
+	17.	concavity error
+    18.	concave points error
+	19.	symmetry error
+	20. fractal dimension error
+    21.	worst radius
+	22.	worst texture
+	23.	worst perimeter 
+	24.	worst area
+    25.	worst smoothness
+	26.	worst compactness
+	27.	worst concavity
+    28.	worst concave points
+	29.	worst symmetry
+	30. worst fractal dimension
+       
+Target:
+	'target'
+			0 : malignant
+			1 :  benign
+  
+
+Workflow:
+Data Preparation:
+	•	Convert .csv file into data frame
+	•	drop 'na' values
+	•	Convert all column values to numeric values
+
+Train-Test-Split:
+	•	Split data set into 80% Training and 20% Testing set
+	•	Pipeline Construction:
+	•	Step 1 : Standard scalar to scale all the features
+	•	Step 2 : Used Random Forest,Decision Tree and Gradient Boosting for result prediction
+
+Model Training and Evaluation:
+	•	Metrics: Accuracy,Confusion Matrix and Classification Report,ROC-AUC curve
+	•	Feature Importance Plot: Shows most influential features
+
+Model Saving and Loading:
+	•	Save the all three models with joblib
+	•	Load models for future predictions without retraining
+
+Running the Project:
+	•	Load data set (only once)
+	•	Train and evaluate model:
+	⁃		python3 Assignment_34.py
+	⁃	Expected Output:
+		
+		-Model saved to path :BCPrediction/Decision Tree.joblib
+
+		-Model saved to path :BCPrediction/Random Forest.joblib
+
+		-Model saved to path :BCPrediction/KNN.joblib
+
+		-Model saved to path :BCPrediction/Logistic Regression.joblib
+
+		-----------------------------------------------------------------
+				Model saved to path :BCPrediction/Logistic Regression.joblib
+		-----------------------------------------------------------------
+		Selected sample data for testing is 
+		:      mean radius  mean texture  mean perimeter  mean area  ...  worst concave points  worst symmetry  worst fractal dimension  target
+		316        12.18         14.08           77.25      461.4  ...               0.01852          0.2293                  0.06037       1
+
+		[1 rows x 31 columns]
+		-----------------------------------------------------------------
+		Sample testing Using : Decision Tree
+		Model loaded from the path :BCPrediction/Decision Tree.joblib
+		Loaded model prediction for randomly selected test sample:No (Non-Cancerous)
+		-----------------------------------------------------------------
+		Sample testing Using : Random Forest
+		Model loaded from the path :BCPrediction/Random Forest.joblib
+		Loaded model prediction for randomly selected test sample:No (Non-Cancerous)
+		-----------------------------------------------------------------
+		Sample testing Using : KNN
+		Model loaded from the path :BCPrediction/KNN.joblib
+		Loaded model prediction for randomly selected test sample:No (Non-Cancerous)
+		-----------------------------------------------------------------
+		Sample testing Using : Logistic Regression
+		Model loaded from the path :BCPrediction/Logistic Regression.joblib
+		Loaded model prediction for randomly selected test sample:No (Non-Cancerous)
+		-----------------------------------------------------------------
+		-----------------------------------------------------------------
+				Comparision matrix for algorithm....
+		-----------------------------------------------------------------
+				Algorithm Name  Training Accuracy  Accuracy Score    Confusion Matrix  ROC-AUC Score    Recall  F1 Score  Precision
+		0        Decision Tree         100.000000       92.982456  [[39, 4], [4, 67]]       0.925319  0.943662  0.943662   0.943662
+		1        Random Forest         100.000000       96.491228  [[40, 3], [1, 70]]       0.996397  0.985915  0.972222   0.958904
+		2                  KNN          98.021978       94.736842  [[40, 3], [3, 68]]       0.981985  0.957746  0.957746   0.957746
+		3  Logistic Regression          98.681319       97.368421  [[41, 2], [1, 70]]       0.997380  0.985915  0.979021   0.972222
+		-----------------------------------------------------------------
+			Actual  Decision Tree  Random Forest  KNN  Logistic Regression
+		204       1            1.0           0.97  1.0         8.864098e-01
+		70        0            0.0           0.00  0.0         9.009362e-06
+		131       0            0.0           0.00  0.0         3.079095e-03
+		431       1            1.0           1.00  1.0         9.994899e-01
+		540       1            1.0           1.00  1.0         9.999394e-01
+		..      ...            ...            ...  ...                  ...
+		486       1            1.0           0.85  0.8         9.678046e-01
+		75        0            0.0           0.03  0.0         6.768252e-04
+		249       1            1.0           1.00  1.0         9.986917e-01
+		238       1            1.0           0.76  1.0         4.573002e-01
+		265       0            0.0           0.00  0.0         7.351061e-13
+
+		[114 rows x 5 columns]
+
+Visualiztions:
+	•	Feature importance(Using )
+	•	Confusion matrix (Random Forest,Decision Tree,Random Forest,KNN and Logistic Regression)
+	•	Accuracy comparision of (Random Forest,Decision Tree,Random Forest,KNN and Logistic Regression)
+	•	ROC-AUC plots (Random Forest,Decision Tree,Random Forest,KNN and Logistic Regression)
+
+Model Storage:
+		-Model saved to path :BCPrediction/Decision Tree.joblib
+		-Model saved to path :BCPrediction/Random Forest.joblib
+		-Model Saved to path :BCPrediction/KNN.joblib
+		-Model Saved to path :BCPrediction/Logistic Regression.joblib
+
+	•	Can be loaded anytime for prediction without retraining
+	⁃	trainedModel=loadTrainedModel(‘BCPrediction/Decision Tree.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘BCPrediction/Random Forest.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘BCPrediction/KNN.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘BCPrediction/Logistic Regression.joblib)
+
+
+Sample Prediction:
+	sampleTestData =df.sample(n=1)
+
+    result=['Yes (Cancerous)','No(Non-Cancerous)']
+    predictedResult=model.predict(sampleData.drop(columns=[TARGET_COLNAME]))
+    print(f"Loaded model prediction for randomly selected test sample:{result[predictedResult[0]]}")
+    print(BORDER)
+
+Author:
+Vaishali Jorwekar
+Date: 13-08-2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
