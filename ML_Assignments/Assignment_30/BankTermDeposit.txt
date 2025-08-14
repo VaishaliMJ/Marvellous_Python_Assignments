@@ -1,0 +1,193 @@
+Priblem Statement:
+A Portuguese bank conducted marketing campaigns to promote term deposit subscriptions. The goal is to
+predict whether a client will subscribe (yes or no) to a term deposit based on their profile and campaign
+interaction details.
+
+Data File :	bank-full.csv
+interaction details.It Follows  industrial best practices  by
+	•	Automating preprocessing with Pipeline
+	•	Scaling the dataset values using StandardScalar
+	•	Used Logistic Regression,KNN and Random Forest as classification algorithms
+	•	Saving and loding trained model using job lib
+	•	Provided data visualiztion 
+
+Dependencies:
+Install the required Python packages before running the project
+	pip install pandas numpy matplotlib scikit-learn joblib
+
+DataSet information:
+Features:
+	1.	age
+	2.	job
+	3.	marital
+	4.	education
+	5.	default
+	6.	balance
+	7.	housing
+	8.	loan
+	9.	contact
+	10.	day
+	11.	month
+	12.	duration
+	13. campaign
+	14.	pdays
+	15.	previous
+	16.	poutcome
+
+
+Target:
+	y 
+			0 : Subscribed
+			1:  Not Subscribed
+  
+
+Workflow:
+Data Preparation:
+	•	Convert .csv file into data frame
+	•	Replace ‘0’ values in the columns by column mean() value
+	•	Replace 'unknown' values in the columns by column highest occured values in the column
+	•	Convert all column values to numeric values
+
+Train-Test-Split:
+	•	Split data set into 80% Training and 20% Testing set
+
+	•	Pipeline Construction:
+	•	Step 1 : Standard scalar to scale all the features
+	•	Step 2 : Used ‘Logistic Regression’,KNN, and 'Random Forest' for result prediction
+
+Model Training and Evaluation:
+	•	Metrics: Accuracy,Confusion Matrix and Classification Report,ROC-AUC curve
+	•	Feature Importance Plot: Shows most influential features
+
+Model Saving and Loading:
+	•	Save the all three models with joblib
+	•	Load models for future predictions without retraining
+
+Running the Project:
+	•	Load data set (only once)
+	⁃	pandas.read_csv(file_path)
+	•	Train and evaluate model:
+	⁃		python3 BankTermDeposit.py
+Expected Output:
+		-----------------------------------------------------------------
+		Column statitics for 'unknown' and '0' values
+		-----------------------------------------------------------------
+     		ColName  Unknown Value Count  Zero Value Count
+	0         age                    0                 0
+	1         job                  288                 0
+	2     marital                    0                 0
+	3   education                 1857                 0
+	4     default                    0                 0
+	5     balance                    0              3514
+	6     housing                    0                 0
+	7        loan                    0                 0
+	8     contact                13020                 0
+	9         day                    0                 0
+	10      month                    0                 0
+	11   duration                    0                 3
+	12   campaign                    0                 0
+	13      pdays                    0                 0
+	14   previous                    0             36954
+	15   poutcome                36959                 0
+	16          y                    0                 0
+
+		-Model saved to path :BANK_TERM_DEPOSIT_MODELS/Logistic Regression.joblib
+
+		-Model saved to path :BANK_TERM_DEPOSIT_MODELS/KNN.joblib
+
+		-Model saved to path :BANK_TERM_DEPOSIT_MODELS/Random Forest.joblib
+
+		-----------------------------------------------------------------
+		Selected sample data for testing is 
+		:        age  job  marital  education  default  balance  housing  ...  month  duration  campaign  pdays  previous  poutcome  y
+		23252   59    1        1          0        0    699.0        0  ...      1      88.0         6     -1  0.580323         0  0
+
+		[1 rows x 17 columns]
+		-----------------------------------------------------------------
+		Sample testing Using : Logistic Regression
+		Model loaded from the path :BANK_TERM_DEPOSIT_MODELS/Logistic Regression.joblib
+		Loaded model prediction for randomly selected test sample:Yes (Subscribe)
+		-----------------------------------------------------------------
+		Sample testing Using : KNN
+		Model loaded from the path :BANK_TERM_DEPOSIT_MODELS/KNN.joblib
+		Loaded model prediction for randomly selected test sample:Yes (Subscribe)
+		-----------------------------------------------------------------
+		Sample testing Using : Random Forest
+		Model loaded from the path :BANK_TERM_DEPOSIT_MODELS/Random Forest.joblib
+		Loaded model prediction for randomly selected test sample:Yes (Subscribe)
+		-----------------------------------------------------------------
+		-----------------------------------------------------------------
+				Comparision matrix for algorithm....
+		-----------------------------------------------------------------
+				Algorithm Name  Training Accuracy  Accuracy Score           Confusion Matrix  ROC-AUC Score
+		0  Logistic Regression          89.991152       89.527812  [[7766, 186], [761, 330]]       0.877961
+		1                  KNN          91.904446       89.251355  [[7701, 251], [721, 370]]       0.812926
+		2        Random Forest         100.000000       90.058609  [[7699, 253], [646, 445]]       0.914499
+		-----------------------------------------------------------------
+		Acutal VS Predicted outputs 
+		-----------------------------------------------------------------
+			Actual  Logistic Regression  KNN  Random Forest
+		3776        0             0.032498  0.0           0.00
+		9928        0             0.070644  0.0           0.00
+		33409       0             0.060803  0.2           0.15
+		31885       0             0.248016  0.0           0.19
+		15738       0             0.049949  0.0           0.01
+		...       ...                  ...  ...            ...
+		13353       0             0.107300  0.0           0.03
+		38732       1             0.183148  0.4           0.49
+		5654        0             0.029651  0.0           0.01
+		3779        0             0.012823  0.2           0.01
+		11677       0             0.075715  0.0           0.09
+
+		[9043 rows x 4 columns]
+
+
+Visualiztions:
+	•	Feature importance(Using Logistic Regression,Random Forest)
+	•	Confusion matrix (Comparision Using 'Logistic Regression','KNN' And 'Random Forest')
+	•	Accuracy comparision of (Logistic Regression,KNN and Random Forest)
+	•	ROC-AUC plots (Logistic Regression,KNN and Random Forest)
+
+Model Storage:
+		-Model saved to path :BANK_TERM_DEPOSIT_MODELS/KNN.joblib
+		-Model saved to path :BANK_TERM_DEPOSIT_MODELS/Logistic Regression.joblib
+		-Model Saved to path :BANK_TERM_DEPOSIT_MODELS/Random Forest.joblib
+
+	•	Can be loaded anytime for prediction without retraining
+	⁃	trainedModel=loadTrainedModel(‘BANK_TERM_DEPOSIT_MODELS/Logistic Regression.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘BANK_TERM_DEPOSIT_MODELS/KNN.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘BANK_TERM_DEPOSIT_MODELS/Random Forest.joblib’)
+
+
+Sample Prediction:
+	sampleTestData =dfBank.sample(n=1)
+
+    result=['Yes (Subscribe)','No(Not Subscribed)']
+    predictedResult=model.predict(sampleData.drop(columns=['y']))
+    print(f"Loaded model prediction for randomly selected test sample:{result[predictedResult[0]]}")
+    print(BORDER)
+
+Author:
+Vaishali Jorwekar
+Date: 11-08-2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
