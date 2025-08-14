@@ -1,0 +1,151 @@
+Diabetes Prediction using Logistic Regression and Pipeline
+
+This project predicts whether a given patient is diabetic  or non-diabetic using “diabetes.csv”
+It Follows  industrial best practices  by
+	•	Automating preprocessing with Pipeline
+	•	Scaling the dataset values using StandardScalar
+	•	Used Logistic Regression as classification algorithm
+	•	Saving and losing trained model using job lib
+	•	Provided data visualiztion 
+
+Dependencies:
+Install the required Python packages before running the project
+	pip install pandas numpy matplotlib scikit-learn joblib
+
+DataSet information:
+Features:
+	1.	Pregnancies
+	2.	Glucose
+	3.	BloodPressure
+	4.	SkinThickness
+	5.	Insulin
+	6.	BMI 
+	7.	DiabetesPedigreeFunction
+	8.	Age
+
+Target:
+	Outcome 
+			0 : Non Diabetic
+			1:  Diabetic
+  
+
+Workflow:
+Data Preparation:
+	•	Convert .csv file into data frame
+	•	Replace ‘0’ values in the columns by column mean() value
+	•	Convert all column values to numeric values
+
+Train-Test-Split:
+	•	Split data set into 80% Training and 20% Testing set
+
+	•	Pipeline Construction:
+	•	Step 1 : Standard scalar to scale all the features
+	•	Step 2 : Used ‘Logistic Regression’,KNN, and Decision Tree for result prediction
+
+Model Training and Evaluation:
+	•	Metrics: Accuracy,Confusion Matrix and Classification Report
+	•	Feature Importance Plot: Shows most influential features
+
+Model Saving and Loading:
+	•	Save the all three models with joblib
+	•	Load models for future predictions without retraining
+
+Running the Project:
+	•	Load data set (only once)
+	⁃	pandas.read_csv(file_path)
+	•	Train and evaluate model:
+	⁃		python3 DiabetesPrediction.py
+	⁃	Expected Output:
+		-----------------------------------------------------------------
+						Zero values in column report
+		-----------------------------------------------------------------
+                   		 	ColName  Missing Value Count
+		0               Pregnancies                  111
+		1                   Glucose                    5
+		2             BloodPressure                   35
+		3             SkinThickness                  227
+		4                   Insulin                  374
+		5                       BMI                   11
+		6  DiabetesPedigreeFunction                    0
+		7                       Age                    0
+			
+		-Model saved to path :diabetes_sample_all/Logistic Regression.joblib
+		-Model saved to path :diabetes_sample_all/KNN.joblib
+		-Model saved to path :diabetes_sample_all/Decision Tree.joblib
+		-----------------------------------------------------------------
+		Selected sample data for testing is 
+		:     Pregnancies  Glucose  BloodPressure  ...  DiabetesPedigreeFunction  Age  Outcome
+		39          4.0    111.0           72.0  ...                      1.39   56        1
+
+		[1 rows x 9 columns]
+		-----------------------------------------------------------------
+		Sample testing Using : Logistic Regression
+		Model loaded from the path :diabetes_sample_all/Logistic Regression.joblib
+		Loaded model prediction for randomly selected test sample:Diabetic
+		-----------------------------------------------------------------
+		Sample testing Using : KNN
+		Model loaded from the path :diabetes_sample_all/KNN.joblib
+		Loaded model prediction for randomly selected test sample:Non Diabetic
+		-----------------------------------------------------------------
+		Sample testing Using : Decision Tree
+		Model loaded from the path :diabetes_sample_all/Decision Tree.joblib
+		Loaded model prediction for randomly selected test sample:Non Diabetic
+		-----------------------------------------------------------------
+		-----------------------------------------------------------------
+				Comparision matrix for algorithm....
+		-----------------------------------------------------------------
+				Algorithm Name  Training Accuracy  Accuracy Score  ... Precision    Recall  F1 Score
+		0  Logistic Regression           77.52443       76.623377  ...  0.686275  0.636364  0.660377
+		1                  KNN           82.57329       73.376623  ...  0.625000  0.636364  0.630631
+		2        Decision Tree          100.00000       73.376623  ...  0.609375  0.709091  0.655462
+
+		[3 rows x 7 columns]
+
+Visualiztions:
+	•	Feature importance(Using Logistic Regression)
+	•	Confusion matrix (Comparision Using 'Logistic Regression','KNN' And 'Decision Tree')
+	•	Accuracy comparision of (Logistic Regression,KNN and Decision Tree)
+Model Storage:
+		-Model saved to path :diabetes_sample_all/Logistic Regression.joblib
+		-Model saved to path :diabetes_sample_all/KNN.joblib
+		-Model saved to path :diabetes_sample_all/Decision Tree.joblib
+	•	Can be loaded anytime for prediction without retraining
+	⁃	trainedModel=loadTrainedModel(‘diabetes_sample_all/Logistic Regression.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘diabetes_sample_all/KNN.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘diabetes_sample_all/Decision Tree.joblib’)
+
+
+Sample Prediction:
+ 	sample =dfDiabetes.sample(n=1)
+
+    result=['Non Diabetic','Diabetic']
+   
+    predictedResult=model.predict(sample.drop(columns=['Outcome']))
+    print(f"Selected sample data for testing is \n: {sample}")
+    print(f"Loaded model prediction for randomly selected test sample:{result[predictedResult[0]]}")
+
+
+Author:
+Vaishali Jorwekar
+Date: 11-08-2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
