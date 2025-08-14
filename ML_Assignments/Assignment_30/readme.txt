@@ -1,1 +1,1 @@
-Updated for Assignment 30 : Breast Cancer Case Study
+Updated for Assignment 30 : Bank Term Deposit subscription prediction
