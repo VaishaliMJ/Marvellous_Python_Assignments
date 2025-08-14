@@ -1,0 +1,160 @@
+Priblem Statement:
+Problem statement: Based on given information find whether given tumor is malignant or benign
+
+Data File :	breast-cancer-wisconsin.csv
+interaction details.It Follows  industrial best practices  by
+	•	Automating preprocessing with Pipeline
+	•	Scaling the dataset values using StandardScalar
+	•	Used Random Forest,Decision Tree and Gradient Boosting as classification algorithms
+	•	Saving and loading trained model using job lib
+	•	Provided data visualiztion 
+
+Dependencies:
+Install the required Python packages before running the project
+	pip install pandas numpy matplotlib scikit-learn joblib
+
+DataSet information:
+Features:
+	1.	CodeNumber 
+	2.	ClumpThickness
+	3.	UniformityCellSize 
+	4.	UniformityCellShape
+	5.	MarginalAdhesion
+	6.	SingleEpithelialCellSize
+	7.	BareNuclei
+	8.	BlandChromatin
+	9.	NormalNucleoli,
+	10.	Mitoses,
+
+Target:
+	CancerType
+			2 : malignant(0)
+			4 :  benign(1)
+  
+
+Workflow:
+Data Preparation:
+	•	Convert .csv file into data frame
+	•	drop 'na' values
+	•	Convert all column values to numeric values
+
+Train-Test-Split:
+	•	Split data set into 80% Training and 20% Testing set
+	•	Pipeline Construction:
+	•	Step 1 : Standard scalar to scale all the features
+	•	Step 2 : Used Random Forest,Decision Tree and Gradient Boosting for result prediction
+
+Model Training and Evaluation:
+	•	Metrics: Accuracy,Confusion Matrix and Classification Report,ROC-AUC curve
+	•	Feature Importance Plot: Shows most influential features
+
+Model Saving and Loading:
+	•	Save the all three models with joblib
+	•	Load models for future predictions without retraining
+
+Running the Project:
+	•	Load data set (only once)
+	⁃	pandas.read_csv(file_path)
+	•	Train and evaluate model:
+	⁃		python3 Assignment_31.py
+	⁃	Expected Output:
+		
+		-Model saved to path :ENSEMBLE_VotingClassifier/Decision Tree.joblib
+
+		-Model saved to path :ENSEMBLE_VotingClassifier/Random Forest.joblib
+
+		-Model saved to path :ENSEMBLE_VotingClassifier/Gradient Boosting.joblib
+
+		-----------------------------------------------------------------
+				Selected sample data for testing is 
+		:     CodeNumber  ClumpThickness  ...  Mitoses  CancerType
+		87     1152331               4  ...        1           0
+
+		[1 rows x 11 columns]
+		-----------------------------------------------------------------
+		Sample testing Using : Decision Tree
+		Model loaded from the path :ENSEMBLE_VotingClassifier/Decision Tree.joblib
+		Loaded model prediction for randomly selected test sample:Yes(Cancerous)
+		-----------------------------------------------------------------
+		Sample testing Using : Random Forest
+		Model loaded from the path :ENSEMBLE_VotingClassifier/Random Forest.joblib
+		Loaded model prediction for randomly selected test sample:Yes(Cancerous)
+		-----------------------------------------------------------------
+		Sample testing Using : Gradient Boosting
+		Model loaded from the path :ENSEMBLE_VotingClassifier/Gradient Boosting.joblib
+		Loaded model prediction for randomly selected test sample:Yes(Cancerous)
+		-----------------------------------------------------------------
+		-----------------------------------------------------------------
+				Comparision matrix for algorithm....
+		-----------------------------------------------------------------
+			Algorithm Name  Training Accuracy  ...    Confusion Matrix ROC-AUC Score
+		0      Decision Tree              100.0  ...  [[88, 1], [2, 49]]      0.974774
+		1      Random Forest              100.0  ...  [[86, 3], [0, 51]]      0.993170
+		2  Gradient Boosting              100.0  ...  [[86, 3], [1, 50]]      0.993391
+
+		[3 rows x 5 columns]
+		-----------------------------------------------------------------
+		-----------------------------------------------------------------
+		Actual VS Predicted results model wise
+		-----------------------------------------------------------------
+			Actual  Decision Tree  Random Forest  Gradient Boosting
+		158       1            1.0           1.00           0.998589
+		499       0            0.0           0.00           0.000995
+		396       0            0.0           0.00           0.000995
+		155       0            0.0           0.00           0.001274
+		321       0            0.0           0.00           0.000908
+		..      ...            ...            ...                ...
+		
+
+
+
+Visualiztions:
+	•	Feature importance(Using Random Forest,Decision Tree and Gradient Boosting )
+	•	Confusion matrix (Comparision Using Random Forest,Decision Tree and Gradient Boosting)
+	•	Accuracy comparision of (Random Forest,Decision Tree and Gradient Boosting)
+	•	ROC-AUC plots (Random Forest,Decision Tree and Gradient Boosting)
+
+Model Storage:
+		-Model saved to path :ENSEMBLE_VotingClassifier/Decision Tree.joblib
+
+		-Model saved to path :ENSEMBLE_VotingClassifier/Random Forest.joblib
+		-Model Saved to path :ENSEMBLE_VotingClassifier/Gradient Boosting.joblib
+
+	•	Can be loaded anytime for prediction without retraining
+	⁃	trainedModel=loadTrainedModel(‘ENSEMBLE_VotingClassifier/Decision Tree.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘ENSEMBLE_VotingClassifier/Random Forest.joblib’)
+	⁃	trainedModel=loadTrainedModel(‘ENSEMBLE_VotingClassifier/Gradient Boosting.joblib’)
+
+
+Sample Prediction:
+	sampleTestData =df.sample(n=1)
+
+    result=['Yes (Cancerous)','No(Non-Cancerous)']
+    predictedResult=model.predict(sampleData.drop(columns=[TARGET_COLNAME]))
+    print(f"Loaded model prediction for randomly selected test sample:{result[predictedResult[0]]}")
+    print(BORDER)
+
+Author:
+Vaishali Jorwekar
+Date: 13-08-2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
