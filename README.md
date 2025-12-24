@@ -240,7 +240,8 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
           </td>
           <td>Machine Learning:Diabetes Case Study(KNN,Decision Tree,Logistic Regression)</td>
         </tr> 
-        <tr>    
+        <tr>
+        <tr>          
         <td>
             <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_30">
               Assignment_30
@@ -279,6 +280,31 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
             </a>
           </td>
           <td>Machine Learning:Breast Cancer prediction with Sckit-learn dataset</td>
-        </tr>        
+        </tr>  
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/DirectoryAndProcessAssignment">
+              DirectoryAndProcessAssignment
+            </a>
+          </td>
+          <td>Directory file sort as per extension(Java,c,cpp),Renaming files with numbers(1,2,3..),Sort files in respective folder as per ext,Terminate and restart a process</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/JavaPractice">
+              JavaPractice
+            </a>
+          </td>
+          <td>Converted some python assignments to java</td>
+        </tr> 
+            <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/ML_Assignments">
+              ML_Assignments
+            </a>
+          </td>
+          <td>Converted ML assignments(28-34) as per industry standards</td>
+        </tr>  
+            
         </tbody>
 </table>
