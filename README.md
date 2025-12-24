@@ -167,6 +167,118 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
             </a>
           </td>
           <td>Directory operations and Schedular combined around 5 assignments</td>
-        </tr>       
+        </tr>  
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_21">
+              Assignment_21
+            </a>
+          </td>
+          <td>Assignments of Running process and schedular</td>
+        </tr>  
+       <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_22">
+              Assignment_22
+            </a>
+          </td>
+          <td>Duplicate file delete and atomatic EMail sent</td>
+        </tr> 
+       <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_23">
+              Assignment_23
+            </a>
+          </td>
+          <td>Pandas library related assignments</td>
+        </tr>
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_24">
+              Assignment_24
+            </a>
+          </td>
+          <td>Pandas data frame assignments</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_25">
+              Assignment_25
+            </a>
+          </td>
+          <td>Finding Outliers,Label Encoding,Min-Max Scaling</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_26">
+              Assignment_26
+            </a>
+          </td>
+          <td>Machine Learning:Play Predictor(KNN)</td>
+        </tr>
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_27">
+              Assignment_27
+            </a>
+          </td>
+          <td>Machine Learning:Adversertising Sales Analysis(Linear Regression)</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_28">
+              Assignment_28
+            </a>
+          </td>
+          <td>Machine Learning:Wine Predictor(Logistic Regression & KNN)</td>
+        </tr>   
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_29">
+              Assignment_29
+            </a>
+          </td>
+          <td>Machine Learning:Diabetes Case Study(KNN,Decision Tree,Logistic Regression)</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_30">
+              Assignment_30
+            </a>
+          </td>
+          <td>Machine Learning:Bank Term Deposit subscription prediction(KNN,Logistic Regression,Random Forest)</td>
+        </tr>
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_31">
+              Assignment_31
+            </a>
+          </td>
+          <td>Machine Learning:Breast Cancer Prediction case study(Random Forest,Decision Tree)</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_32">
+              Assignment_32
+            </a>
+          </td>
+          <td>Machine Learning:News Validity Analysis(Fake or Real)</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_33">
+              Assignment_33
+            </a>
+          </td>
+          <td>Machine Learning:Student performance clustering with K-Means</td>
+        </tr>
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_34">
+              Assignment_34
+            </a>
+          </td>
+          <td>Machine Learning:Breast Cancer prediction with Sckit-learn dataset</td>
+        </tr>        
         </tbody>
 </table>
