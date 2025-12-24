@@ -85,7 +85,88 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
               Assignment_10
             </a>
           </td>
-          <td>Exception handling,Filter-Map-Reduce/td>
+          <td>Exception handling,Filter-Map-Reduce</td>
         </tr>
+        <tr>
+          <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_11">
+              Assignment_11
+            </a>
+          </td>
+          <td>Recursion Assignments: Factorial,digits addition,printing numbers,pattern printing using recursion</td>
+        </tr>    
+        <tr>
+          <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_12">
+              Assignment_12
+            </a>
+          </td>
+          <td>OOP concept:Introduction to class,Circle area & perimeter calculation,Calculator</td>
+        </tr>    
+        <tr>
+          <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_13">
+              Assignment_13
+            </a>
+          </td>
+          <td>OOP concept:Class  and instance variables</td>
+        </tr>    
+       <tr>
+          <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_14">
+              Assignment_14
+            </a>
+          </td>
+          <td>OOP concept:Derived class and other oop concept related 10 assignments</td>
+        </tr> 
+        <tr>
+          <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_15">
+              Assignment_15
+            </a>
+          </td>
+          <td>File Operations:Assignments related to file exsists,open read,searching a string and its frequency.
+                Implemented with command line arguments </td>
+        </tr>  
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_16">
+              Assignment_16
+            </a>
+          </td>
+          <td>File Operations:Write in a file,copy etc. Total 8 assignmnents </td>
+        </tr>  
+       <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_17">
+              Assignment_17
+            </a>
+          </td>
+          <td>Schedular in Python : 8 Assignments </td>
+        </tr>   
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_18">
+              Assignment_18
+            </a>
+          </td>
+          <td>File and command line argument assignments </td>
+        </tr>  
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_19">
+              Assignment_19
+            </a>
+          </td>
+          <td> 8 Assignments of Directory file search,copy,search with extension,Rename</td>
+        </tr> 
+        <tr>    
+        <td>
+            <a href = "https://github.com/VaishaliMJ/Marvellous_Python_Assignments/tree/main/Assignment_20">
+              Assignment_20
+            </a>
+          </td>
+          <td>Directory operations and Schedular combined around 5 assignments</td>
+        </tr>       
         </tbody>
 </table>
