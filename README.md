@@ -182,7 +182,7 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
               Assignment_22
             </a>
           </td>
-          <td>Duplicate file delete and atomatic EMail sent</td>
+          <td>Duplicate file delete and atomatic EMail functionality</td>
         </tr> 
        <tr>    
         <td>
