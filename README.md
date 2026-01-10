@@ -303,7 +303,7 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
               ML_Assignments
             </a>
           </td>
-          <td>Converted ML assignments(28-34) as per industry standards</td>
+          <td>Converted ML assignments/Case Studies(28-34) as per industry coding standards</td>
         </tr>  
             
         </tbody>
