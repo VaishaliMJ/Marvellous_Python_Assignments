@@ -305,6 +305,5 @@ This is repository contains assignments conducted by "Marvellous Infosystems"
           </td>
           <td>Converted ML assignments/Case Studies(28-34) as per industry coding standards</td>
         </tr>  
-            
         </tbody>
 </table>
